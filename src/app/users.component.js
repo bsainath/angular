@@ -9,28 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
 var UsersComponent = (function () {
-    function UsersComponent(route) {
-        this.route = route;
-        console.log('users');
+    function UsersComponent() {
+        this.newval = '';
+        // console.log('users');
     }
     UsersComponent.prototype.testclick = function (event) {
         var target = event.target || event.srcElement || event.currentTarget;
         var idAttr = event.target.attributes.id;
-        console.log(idAttr);
+        //   console.log(idAttr);
         var value = idAttr.nodeValue;
-        console.log(value);
-        console.log(event.target.id);
+        // console.log(value);
+        //  console.log(event.target.id);
+        this.newval = value;
     };
     return UsersComponent;
 }());
 UsersComponent = __decorate([
     core_1.Component({
         selector: 'user',
-        template: "<form><input type=\"text\" EmailValidate  /></form>  <div>\n  <button type=\"button\" id=\"ted\" (click)=\"testclick($event)\" >hgfhgfhg</button>\n  <input type=\"radio\" name=\"colors\" >blue\n  <input type=\"radio\" name=\"colors\" (click)=\"color='orange'\">orange\n  <input type=\"radio\" name=\"colors\" (click)=\"color='green'\">green\n</div>",
+        template: "<form><input  [value]='newval' type=\"text\" EmailValidate  /></form>  <div>\n  <button type=\"button\" id=\"ted\" (click)=\"testclick($event)\" >hgfhgfhg</button>\n  <input type=\"radio\" name=\"colors\" >blue\n  <input type=\"radio\" name=\"colors\" (click)=\"color='orange'\">orange\n  <input type=\"radio\" name=\"colors\" (click)=\"color='green'\">green\n</div>",
     }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute])
+    __metadata("design:paramtypes", [])
 ], UsersComponent);
 exports.UsersComponent = UsersComponent;
 //# sourceMappingURL=users.component.js.map

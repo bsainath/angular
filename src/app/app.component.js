@@ -13,7 +13,7 @@ var users_service_1 = require("./users.service");
 var AppComponent = (function () {
     function AppComponent(_exampleService) {
         this._exampleService = _exampleService;
-        this.name = 'test';
+        this.name = 'Angular2';
     }
     AppComponent.prototype.ngOnInit = function () {
         this.users = this._exampleService.getusers();
@@ -23,7 +23,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h5>Hello {{name}}</h5>  <ul> \n  <li *ngFor=\"let user of users\">\n <a [routerLink]=\"['/user']\">\n       {{ user }}\n      </a>\n    \n  </li> </ul>\n<router-outlet></router-outlet>",
+        template: "<h5>Hello {{name}}</h5>  <ul> \n  <li *ngFor=\"let user of users\">\n <a [routerLink]=\"['/users']\">\n       {{ user }}\n      </a>\n    \n  </li> </ul>\n<router-outlet></router-outlet>",
     }),
     __metadata("design:paramtypes", [users_service_1.UsersService])
 ], AppComponent);
